@@ -6,6 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+   "engines": {
+   "node" : "6.9.1",
+   "npm" : "3.10.8" 
+},
   "author": "Brad Traversy",
   "license": "ISC",
   "dependencies": {
@@ -24,4 +28,5 @@
     "passport-http": "*",
     "passport-local": "*"
   }
+
 }
