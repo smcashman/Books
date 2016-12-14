@@ -7,6 +7,10 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+ #loginbody{
+    background-image: url('/images/bookstack.jpg');
+ }
+
 .recommendedTitle{
     font-weight:bold;
     padding:5px;
