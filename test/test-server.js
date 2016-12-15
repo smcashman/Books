@@ -11,7 +11,7 @@ chai.use(chaiHttp);
 describe('books', function() {
     it('should return status 200', function(done) {
         chai.request(app)
-            .get('/')
+            .get('/books')
             .end(function(err, res) {
                 res.should.have.status(200);
                 done();
