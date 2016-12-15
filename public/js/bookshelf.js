@@ -18,7 +18,7 @@ $(document).ready(function() {
             console.log(shelfOption)
 
             $('.displayExistingTitles div').hide();
-            $('.displayExistingTitles div.' + shelfOption).show();
+            $('.displayExistingTitles div' + shelfOption).show();
 
 
         });

@@ -57,10 +57,11 @@ body{
 }
 
 #headTitle {
-	font-size: 2em;
+	font-size: 3em;
 	margin-top:2em;
-	margin-bottom:3em;
+	margin-bottom:2em;
     font-family: 'Poppins', sans-serif;
+    font-weight:bold;
 }
 
 .eachAppend{
@@ -241,7 +242,7 @@ form {
 
 .headerStyle{
     position: fixed;
-    top: -10;
+    top: 0;
     right: 0;
 }
 
@@ -249,4 +250,19 @@ form {
      display:inline-block;
 }
 
+.loginButtonSubmit{
+    border-radius:20px;
+    font-size: 1em;
+    margin-top:5px;
+    background-color: rgb(29,128,127);
+
+}
+
+.page-header {
+    margin-top:150px;
+}
+
+.form-group{
+    padding:5px;
+}
 
