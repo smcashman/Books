@@ -22,7 +22,8 @@ var BookSchema   = new Schema({
     
 });
 
-mongoose.connect('mongodb://Admin1:Password1@ds111178.mlab.com:11178/bookshelf');
+// mongoose.connect('mongodb://Admin1:Password1@ds111178.mlab.com:11178/bookshelf');
+mongoose.connect('mongodb://heroku_8msqxxn4:s75e45t3j1j18d9ou3gbiiuasc@ds133328.mlab.com:33328/heroku_8msqxxn4');
 var db = mongoose.connection;
 
 var routes = require('./routes/index');

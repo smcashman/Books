@@ -1,5 +1,6 @@
 * {
 	text-align:center;
+    
 
 }
 
@@ -7,13 +8,11 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
- #loginbody{
-    background-image: url('/images/bookstack.jpg');
- }
 
 .recommendedTitle{
     font-weight:bold;
     padding:5px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .suggestionBox{
@@ -22,6 +21,7 @@ body {
     width:500px;
     text-align: center;
     margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
 }
 
 #suggestionTitle{
@@ -60,6 +60,7 @@ body{
 	font-size: 2em;
 	margin-top:2em;
 	margin-bottom:3em;
+    font-family: 'Poppins', sans-serif;
 }
 
 .eachAppend{
@@ -233,5 +234,18 @@ form {
     width: 80%; /* Could be more or less, depending on screen size */
 }
 
+#bookInfoForm, .formTitle, .headerStyle {
+    font-family: 'Poppins', sans-serif;
+}
+
+.headerStyle{
+    position: fixed;
+    top: -10;
+    right: 0;
+}
+
+.headerStyle li{
+     display:inline-block;
+}
 
 
