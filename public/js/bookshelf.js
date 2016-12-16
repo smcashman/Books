@@ -38,6 +38,8 @@ $(document).ready(function() {
 
         });
 
+        //switches book listing back to a form to change the information
+
         $('.editButton').click(function() {
 
 
@@ -75,6 +77,8 @@ $(document).ready(function() {
                 $(this).parent('p').children('span.bookTags').html(' <select name="tagsName" class="tagsDropDown"><option value="readreturn" name="readreturn" class="ReadandReturn" selected>Read & Returned</option><option value="reference" name="reference" class="bookReference" >Reference</option><option value="favorites" name="favorites" class="favoritedBook">Favorites</option><option value="wishlist" name="wishlist" class="wishList">Wishlist</option><option value="TBR" name="TRB" class="tagsTBR">To be read</option><option value="readreturn" name="readreturn" class="ReadandReturn">Read & Returned</option></select>')
             }
 
+             //collect the inputs to construct the new JSON object
+
             $('.updateButton').click(function() {
 
 
@@ -89,7 +93,7 @@ $(document).ready(function() {
                 console.log(editedRead)
 
 
-
+                // construct and send JSON as PUT
 
                 var updateObject = new Object();
                 updateObject._id = buttonClassUpdate;
@@ -119,6 +123,8 @@ $(document).ready(function() {
         });
 
     });
+
+    
     $('textarea#reviewBox').click(function() {
         $(this).text('');
     })
@@ -135,7 +141,7 @@ $(document).ready(function() {
     $('.suggestionBox').click(function() {
         $('#suggestSearchBox').show();
     });
-
+    //gather search terms to send to Tastekid API
     $('#submitSearch').click(function() {
         searchTerm = $('#bookSearchTerms').val();
         console.log(searchTerm)
@@ -171,18 +177,18 @@ $(document).ready(function() {
     // add form modal 
     var addModal = document.getElementById('addTitleModal');
 
-    // Get the button that opens the modal
+    
     var btn = document.getElementById('openAddButton');
 
-    // Get the <span> element that closes the modal
+    
     var span = document.getElementsByClassName('close')[0];
 
-    // When the user clicks on the button, open the modal 
+    
     btn.onclick = function() {
         addModal.style.display = 'block';
     }
 
-    // When the user clicks on <span> (x), close the modal
+   
     span.onclick = function() {
         addModal.style.display = 'none';
     }
@@ -196,23 +202,23 @@ $(document).ready(function() {
         // show books modal
     var showModal = document.getElementById('showBooksModal');
 
-    // Get the button that opens the modal
+    
     var btn = document.getElementById('displayBookshelf');
 
-    // Get the <span> element that closes the modal
+    
     var span = document.getElementsByClassName('showClose')[0];
 
-    // When the user clicks on the button, open the modal 
+   
     btn.onclick = function() {
         showModal.style.display = 'block';
     }
 
-    // When the user clicks on <span> (x), close the modal
+    
     span.onclick = function() {
         showModal.style.display = 'none';
     }
 
-    // When the user clicks anywhere outside of the modal, close it
+    
     window.onclick = function(event) {
         if (event.target == showModal) {
             showModal.style.display = 'none';
@@ -222,23 +228,23 @@ $(document).ready(function() {
     // show suggestion modal
     var suggestModal = document.getElementById('showSuggestionModal');
 
-    // Get the button that opens the modal
+    
     var btn = document.getElementById('openSuggestionOverlay');
 
-    // Get the <span> element that closes the modal
+    
     var span = document.getElementsByClassName('suggestClose')[0];
 
-    // When the user clicks on the button, open the modal 
+     
     btn.onclick = function() {
         suggestModal.style.display = 'block';
     }
 
-    // When the user clicks on <span> (x), close the modal
+    
     span.onclick = function() {
         suggestModal.style.display = 'none';
     }
 
-    // When the user clicks anywhere outside of the modal, close it
+    
     window.onclick = function(event) {
         if (event.target == suggestModal) {
             suggestModal.style.display = 'none';

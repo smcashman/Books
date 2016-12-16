@@ -26,11 +26,15 @@ Send an Ajax GET call to /books/:_ID to return a listing for a specific book
 * [Mongodb](https://www.mongodb.com/) - Database
 * [Mongoose](http://mongoosejs.com/) - Used to work with database
 * [Express](http://expressjs.com/) - Used to handle server routes
+* [Handlebars](http://handlebarsjs.com/) - Templating
 * [Tastekid API](https://www.tastekid.com/) - Used to power the suggestions
+* [Passport](http://passportjs.org/) - Login Credentials
 
 ## Authors
 
 * **Sara Cashman** - [Sara Cashman](https://github.com/smcashman)
+* **Coffee
+* **Googling
 
 
 

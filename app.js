@@ -23,31 +23,31 @@ var BookSchema = new Schema({
 });
 
 mongoose.connect('mongodb://Admin1:Password1@ds111178.mlab.com:11178/bookshelf');
-// mongoose.connect('mongodb://heroku_8msqxxn4:s75e45t3j1j18d9ou3gbiiuasc@ds133328.mlab.com:33328/heroku_8msqxxn4');
+
 
 var db = mongoose.connection;
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
-// Init App
+// Initialize App
 var app = express();
 
-// View Engine
+
 app.set('views', path.join(__dirname, 'views'));
 app.engine('handlebars', exphbs({
     defaultLayout: 'layout'
 }));
 app.set('view engine', 'handlebars');
 
-// BodyParser Middleware
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: false
 }));
 app.use(cookieParser());
 
-// Set Static Folder
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Express Session
@@ -57,11 +57,11 @@ app.use(session({
     resave: true
 }));
 
-// Passport init
+// Passport 
 app.use(passport.initialize());
 app.use(passport.session());
 
-// Express Validator
+
 app.use(expressValidator({
     errorFormatter: function(param, msg, value) {
         var namespace = param.split('.'),
@@ -79,10 +79,9 @@ app.use(expressValidator({
     }
 }));
 
-// Connect Flash
+
 app.use(flash());
 
-// Global Vars
 app.use(function(req, res, next) {
     res.locals.success_msg = req.flash('success_msg');
     res.locals.error_msg = req.flash('error_msg');
@@ -96,7 +95,7 @@ app.use(function(req, res, next) {
 app.use('/', routes);
 app.use('/users', users);
 
-// Set Port
+
 app.set('port', (process.env.PORT || 3000));
 
 app.listen(app.get('port'), function() {
@@ -107,9 +106,6 @@ app.listen(app.get('port'), function() {
 
 
 var Novel = mongoose.model('Novel', BookSchema);
-
-// app.use(bodyParser.urlencoded({extended: true}))
-// app.use(bodyParser.json());
 
 // add a book
 app.post('/books', function(req, res) {
@@ -125,10 +121,6 @@ app.post('/books', function(req, res) {
     book.save(function(err) {
         if (err)
             res.send(err);
-        console.log(req.body.review)
-        console.log(req.body.tags)
-            //console.log(book)
-            // res.json({ message: 'Book added!' });
         res.redirect('/');
     });
 });
@@ -172,7 +164,7 @@ app.put('/books/:_id', function(req, res) {
         _id: req.params._id
     }
     var updateThis = req.body;
-    // console.log(updateThis)
+    
     updatedbook = new Novel({
         title: req.body.title,
         author: req.body.author,
