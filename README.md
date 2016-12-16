@@ -5,7 +5,20 @@ A modern one-page app to help you manage your book collection. Avoid that awkwar
 As a book hoarder, I know how hard it is to keep track of what books you have, which ones you've read, and which ones you want to read!
 
 ## Using the application
+Click on the middle box to view your titles, click the right box to add a new title to your collection, or click the left box to find suggestions for new titles
 ![Mainpage](public/images/mainpage.png?raw=true "Main page")
+View your results including any reviews or notes about the book. Click to filter by bookshelf!
+![Results](public/images/resultspage.png?raw=true "Results Page")
+Add a new book to your collection, including notes, whether or not you've read it, and what category it belongs to.
+![Addpage](public/images/addbook.png?raw=true "Add page")
+Stuck on what to read next? Look for suggestions based on other authors or books you've enjoyed.
+![Suggestions](public/images/suggestion.png?raw=true "Suggestion page")
+
+## API Documentation
+Bookshelf is a RESTful app that will return results in JSON.
+Ajax GET calls to /books will return a JSON object listing all books currently in the database. 
+Send an Ajax GET call to /books/:_ID to return a listing for a specific book 
+
 
 ## Built With
 
