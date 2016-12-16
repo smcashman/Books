@@ -1,13 +1,7 @@
 * {
-	text-align:center;
-    
+	text-align:center;  
 
 }
-
-body {
-    font-family: 'Poppins', sans-serif;
-}
-
 
 .recommendedTitle{
     font-weight:bold;
@@ -138,10 +132,6 @@ form {
 	margin: 0 auto;
 }
 
-/*#buttonWrapper {
-	display:none;
-}*/
-
 /*add books overlay*/
 .addBookOverlay{
 	display:none;
@@ -155,24 +145,24 @@ form {
 }
 
 .addModal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-image: url("/images/typewriterFullSize.jpeg"); /* Black w/ opacity */
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-image: url("/images/typewriterFullSize.jpeg"); 
 }
 
 .showAddForm {
     background-color: rgba(211,227,224,.93);
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 15% auto; 
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 80%; 
 }
 
 .close, .showClose, .suggestClose {
@@ -193,47 +183,47 @@ form {
 
 
 .booksModal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-image: url("/images/booksFullSize.jpeg"); /* Black w/ opacity */
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-image: url("/images/booksFullSize.jpeg"); 
 }
 
 .modalShowBooks {
     background-color: rgba(29,128,127,.93);
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 15% auto; 
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 80%; 
     font-family: 'Poppins', sans-serif;
 }
 
 /*suggestions overlay*/
 .suggestionModal{
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-image: url("/images/retroFullSize.jpg"); /* Black w/ opacity */
+    width: 100%;
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-image: url("/images/retroFullSize.jpg"); 
 }
 
 .modalSuggestions{
     background-color: rgba(247,228,159,.93);
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 15% auto; 
     padding: 20px;
     border: 3px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 80%; 
 }
 
 #bookInfoForm, .formTitle, .headerStyle {

@@ -5,7 +5,7 @@ A modern one-page app to help you manage your book collection. Avoid that awkwar
 As a book hoarder, I know how hard it is to keep track of what books you have, which ones you've read, and which ones you want to read!
 
 ## Using the application
-![Mainpage](/../images/mainpage.png?raw=true "Main page")
+![Mainpage](public/images/mainpage.png?raw=true "Main page")
 
 ## Built With
 
