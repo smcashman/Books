@@ -18,6 +18,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+span#openSuggestionOverlay:hover, span#displayBookshelf:hover, span#openAddButton:hover{
+    cursor:pointer;
+}
+
 #suggestionTitle{
     margin-bottom:5px;
 }
