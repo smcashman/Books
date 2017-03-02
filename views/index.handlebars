@@ -4,15 +4,15 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 
     <h1 id="headTitle"> Bookshelf</h1>
-    <div class="bookDisplayImage">
+    <div class="bookDisplayImage" id="bookSuggestImg">
     <img src="/images/retro.jpg" class="imgSquare" alt="click to get recommendations">
     <h2><span id="openSuggestionOverlay">Looking for new suggestions?</span></h2>
     </div>
-    <div class="bookDisplayImage">
+    <div class="bookDisplayImage" id="bookDisplayImg">
     <img src="/images/books.jpeg" class="imgSquare" alt="click to display your books">
     <h2><span id="displayBookshelf">Click to display your books</span></h2>
     </div>
-    <div class="bookDisplayImage">
+    <div class="bookDisplayImage" id="bookAddImg">
     <img src="/images/typewriter.jpeg" class="imgSquare" alt="click to add new title">
     <h2><span id="openAddButton"> Click to add new titles </span></h2>
 </div>
@@ -20,7 +20,7 @@
     <div id="showBooksModal" class="booksModal">
 
     <div class='modalShowBooks' id="openBooksModal">
-        <span class="showClose">&times;</span>
+        <span class="showClose">Return to home</span>
 
     <div id="buttonWrapper">
            
@@ -28,8 +28,20 @@
 
             <select name="filterbooks" class="filterBooks" id="filterBook"><option value="TBR" name="TBR" class="tagsTBR">To be read</option><option value="wishlist" name="wishlist" class="wishList">Wishlist</option><option value="favorites" name="favorites" class="favoritedBook">Favorites</option><option value="reference" name="reference" class="bookReference">Reference</option><option value="readandreturn" name="readandreturn" class="ReadandReturn">Read & Returned</option></select>
             <button id="showBooks" form="filterBookForm"> Filter Books </button>
+            <button id="showAllBooks"> Show All Books </button>
          <div class='displayExistingTitles'>
         </div>
+        <div class='wishlistDisplay'>
+        </div>
+        <div class='tobereadDisplay'>
+        </div>
+        <div class='favoritesDisplay'>
+        </div>
+        <div class='readandreturnDisplay'>
+        </div>
+        <div class='referenceDisplay'>
+        </div>
+
         
     </div>
 </div>
@@ -56,7 +68,7 @@
     <div id="addTitleModal" class="addModal">
 
     <div class='showAddForm' id="openAddModal">
-        <span class="close">&times;</span>
+        <span class="close">Return to home</span>
         <h2 class="formTitle"> Add a new title to your bookshelf </h2>
         <form action="/books" method="POST" id='bookInfoForm'>
             <input id="title" type="text" placeholder="Title" name="title">
@@ -77,7 +89,7 @@
 <div id="showSuggestionModal" class="suggestionModal">
 
     <div class='modalSuggestions' id="openSuggestionModal">
-        <span class="suggestClose">&times;</span>
+        <span class="suggestClose">Return to home</span>
     <div class="suggestionBox">
         <div id="suggestSearchBox">
             <p id="suggestionTitle"> Enter a favorite title or author to find new suggestions</p>

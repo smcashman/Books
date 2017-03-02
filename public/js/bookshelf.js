@@ -7,20 +7,64 @@ $(document).ready(function() {
 
         $.each(data, function(index, value) {
 
-
-            $('.displayExistingTitles').append('<div class="eachAppend" class="' + value.tags + '"><p class=' + value._id + '><span class="bookTitle"> Title: ' + value.title + ' </span><span class="bookAuthor">Author: ' + value.author + ' </span><span class="read">Have you read it? ' + value.readBook + ' </span><span class="bookReview"> notes: ' + value.review + ' </span><span class="bookTags">Tags: ' + value.tags + ' </span><button  id=' + value._id + ' class="deleteButton">Delete</button><button class="editButton">Edit</button><button class="updateButton">Update</button></p></div>')
-
+             if (value.tags == "wishlist"){
+                $('.wishlistDisplay').append('<div class="eachAppend" class="' + value.tags + '"><p class=' + value._id + '>Title: <span class="bookTitle">' + value.title + ' </span>Author:<span class="bookAuthor"> ' + value.author + ' </span>Have you read it? <span class="read">' + value.readBook + ' </span> notes: <span class="bookReview">' + value.review + ' </span>Tags: <span class="bookTags">' + value.tags + ' </span><button  id=' + value._id + ' class="deleteButton">Delete</button><button class="editButton">Edit</button><button class="updateButton">Update</button></p></div>')
+             } else if (value.tags == "TBR"){
+                $('.tobereadDisplay').append('<div class="eachAppend" class="' + value.tags + '"><p class=' + value._id + '>Title: <span class="bookTitle">' + value.title + ' </span>Author:<span class="bookAuthor"> ' + value.author + ' </span>Have you read it? <span class="read">' + value.readBook + ' </span> notes: <span class="bookReview">' + value.review + ' </span>Tags: <span class="bookTags">' + value.tags + ' </span><button  id=' + value._id + ' class="deleteButton">Delete</button><button class="editButton">Edit</button><button class="updateButton">Update</button></p></div>')
+             } else if (value.tags == "favorites"){
+                $('.favoritesDisplay').append('<div class="eachAppend" class="' + value.tags + '"><p class=' + value._id + '>Title: <span class="bookTitle">' + value.title + ' </span>Author:<span class="bookAuthor"> ' + value.author + ' </span>Have you read it? <span class="read">' + value.readBook + ' </span> notes: <span class="bookReview">' + value.review + ' </span>Tags: <span class="bookTags">' + value.tags + ' </span><button  id=' + value._id + ' class="deleteButton">Delete</button><button class="editButton">Edit</button><button class="updateButton">Update</button></p></div>')
+             } else if (value.tags == "readandreturn"){
+                $('.readandreturnDisplay').append('<div class="eachAppend" class="' + value.tags + '"><p class=' + value._id + '>Title: <span class="bookTitle">' + value.title + ' </span>Author:<span class="bookAuthor"> ' + value.author + ' </span>Have you read it? <span class="read">' + value.readBook + ' </span> notes: <span class="bookReview">' + value.review + ' </span>Tags: <span class="bookTags">' + value.tags + ' </span><button  id=' + value._id + ' class="deleteButton">Delete</button><button class="editButton">Edit</button><button class="updateButton">Update</button></p></div>')
+             } else if (value.tags == "reference"){
+                $('.referenceDisplay').append('<div class="eachAppend" class="' + value.tags + '"><p class=' + value._id + '>Title: <span class="bookTitle">' + value.title + ' </span>Author:<span class="bookAuthor"> ' + value.author + ' </span>Have you read it? <span class="read">' + value.readBook + ' </span> notes: <span class="bookReview">' + value.review + ' </span>Tags: <span class="bookTags">' + value.tags + ' </span><button  id=' + value._id + ' class="deleteButton">Delete</button><button class="editButton">Edit</button><button class="updateButton">Update</button></p></div>')
+             }
+            else{
+                $('.displayExistingTitles').append('<div> Sorry, no books to display! </div>')
+            }
 
         });
 
         $('#showBooks').click(function() {
-            var shelfOption = $('.filterBooks').val();
-            console.log(shelfOption)
+            $('#showAllBooks').show();
+             $('.displayExistingTitles div').hide();
+             var filterSelected = $('#filterBook').val()
+            if (filterSelected == 'reference'){
+                $('.readandreturnDisplay').hide();
+                $('.favoritesDisplay').hide();
+                $('.tobereadDisplay').hide();
+                $('.wishlistDisplay').hide();
+            } else if (filterSelected == 'readandreturn'){
+                $('.favoritesDisplay').hide();
+                $('.tobereadDisplay').hide();
+                $('.wishlistDisplay').hide();
+                $('.referenceDisplay').hide();
+            } else if (filterSelected == 'favorites'){
+                $('.tobereadDisplay').hide();
+                $('.wishlistDisplay').hide();
+                $('.referenceDisplay').hide();
+                $('.readandreturnDisplay').hide();
+            } else if (filterSelected == 'TBR'){
+                $('.wishlistDisplay').hide();
+                $('.referenceDisplay').hide();
+                $('.readandreturnDisplay').hide();
+                $('.favoritesDisplay').hide();
+            } else if (filterSelected == 'wishlist'){
+                $('.readandreturnDisplay').hide();
+                $('.favoritesDisplay').hide();
+                $('.tobereadDisplay').hide();
+                $('.referenceDisplay').hide();
+            }
 
-            $('.displayExistingTitles div').hide();
-            $('.displayExistingTitles div' + shelfOption).show();
 
+        });
 
+        $('#showAllBooks').click(function(){
+            $('.readandreturnDisplay').show();
+            $('.favoritesDisplay').show();
+            $('.tobereadDisplay').show();
+            $('.referenceDisplay').show();
+            $('.wishlistDisplay').show();
+            $(this).hide();
         });
 
         $('.deleteButton').click(function() {
@@ -65,13 +109,14 @@ $(document).ready(function() {
             $(this).parent('p').children('span.bookReview').html("<input id='editReview' name='editReview' type='text' value='" + review + "'>");
 
             var tagOption = $(this).parent('p').children('span.bookTags').text();
-            if (tagOption == 'To be read') {
+            console.log(tagOption)
+            if (tagOption == 'TBR') {
                 $(this).parent('p').children('span.bookTags').html(' <select name="tagsName" class="tagsDropDown"><option value="TBR" name="TRB" class="tagsTBR" selected>To be read</option><option value="wishlist" name="wishlist" class="wishList">Wishlist</option><option value="favorites" name="favorites" class="favoritedBook">Favorites</option><option value="reference" name="reference" class="bookReference">Reference</option><option value="readreturn" name="readreturn" class="ReadandReturn">Read & Returned</option></select>')
-            } else if (tagOption == 'Wishlist') {
+            } else if (tagOption == 'wishlist') {
                 $(this).parent('p').children('span.bookTags').html(' <select name="tagsName" class="tagsDropDown"><option value="wishlist" name="wishlist" class="wishList" selected>Wishlist</option><option value="TBR" name="TRB" class="tagsTBR">To be read</option><option value="favorites" name="favorites" class="favoritedBook">Favorites</option><option value="reference" name="reference" class="bookReference">Reference</option><option value="readreturn" name="readreturn" class="ReadandReturn">Read & Returned</option></select>')
-            } else if (tagOption == 'Favorites') {
+            } else if (tagOption == 'favorites') {
                 $(this).parent('p').children('span.bookTags').html(' <select name="tagsName" class="tagsDropDown"><option value="favorites" name="favorites" class="favoritedBook" selected>Favorites</option><option value="wishlist" name="wishlist" class="wishList">Wishlist</option><option value="TBR" name="TRB" class="tagsTBR">To be read</option><option value="reference" name="reference" class="bookReference">Reference</option><option value="readreturn" name="readreturn" class="ReadandReturn">Read & Returned</option></select>')
-            } else if (tagOption == 'Reference') {
+            } else if (tagOption == 'reference') {
                 $(this).parent('p').children('span.bookTags').html(' <select name="tagsName" class="tagsDropDown"><option value="reference" name="reference" class="bookReference" selected>Reference</option><option value="favorites" name="favorites" class="favoritedBook">Favorites</option><option value="wishlist" name="wishlist" class="wishList">Wishlist</option><option value="TBR" name="TRB" class="tagsTBR">To be read</option><option value="readreturn" name="readreturn" class="ReadandReturn">Read & Returned</option></select>')
             } else {
                 $(this).parent('p').children('span.bookTags').html(' <select name="tagsName" class="tagsDropDown"><option value="readreturn" name="readreturn" class="ReadandReturn" selected>Read & Returned</option><option value="reference" name="reference" class="bookReference" >Reference</option><option value="favorites" name="favorites" class="favoritedBook">Favorites</option><option value="wishlist" name="wishlist" class="wishList">Wishlist</option><option value="TBR" name="TRB" class="tagsTBR">To be read</option><option value="readreturn" name="readreturn" class="ReadandReturn">Read & Returned</option></select>')
@@ -89,8 +134,11 @@ $(document).ready(function() {
                 var editedReview = $('p.' + buttonClassUpdate).children('span').children('input#editReview').val();
                 var editedTags = $('p.' + buttonClassUpdate).children('span.bookTags').children('input#editTags').val();
 
+                console.log(editedTags)
+                $(this).parent('p').html('Title: <span class="bookTitle">' + editedTitle + ' </span>Author:<span class="bookAuthor"> ' + editedAuthor + ' </span>Have you read it? <span class="read">' + editedRead + ' </span> notes: <span class="bookReview">' + editedReview + ' </span>Tags: <span class="bookTags">' + editedTags + ' </span><button  id=' + buttonClassUpdate + ' class="deleteButton">Delete</button><button class="editButton">Edit</button><button class="updateButton">Update</button>');
 
-                console.log(editedRead)
+
+        
 
 
                 // construct and send JSON as PUT
@@ -109,8 +157,8 @@ $(document).ready(function() {
                     type: 'PUT',
                     data: updateObject,
                     success: function() {
-
-                        console.log(buttonClassUpdate);
+                        
+                 
 
                     }
 
@@ -142,7 +190,17 @@ $(document).ready(function() {
         $('#suggestSearchBox').show();
     });
     //gather search terms to send to Tastekid API
+
+    $("#bookSearchTerms").keyup(function(event){
+    if(event.keyCode == 13){
+        $("#submitSearch").click();
+    }
+});
+
     $('#submitSearch').click(function() {
+        if (('.showRecommends').length>0){
+            $('.showRecommends').html("");
+        };
         searchTerm = $('#bookSearchTerms').val();
         console.log(searchTerm)
 
@@ -162,14 +220,19 @@ $(document).ready(function() {
             myData = data.Similar.Results
             console.log(myData)
 
-
-            $.each(myData, function(index, value) {
+                if (data.length < 1){
+                $('.showRecommends').append("No results found")
+                }
+                else{ 
+                    $.each(myData, function(index, value) {
                 var newTitle = value.Name
                 var newDescription = value.wTeaser
 
                 $('.showRecommends').append('<p class="recommendedTitle"> ' + newTitle + '</p>');
                 $('.showRecommends').append('<p class="recommendedDescription"> ' + newDescription + '</p>')
-            });
+                });
+            };
+            
         });
     });
 
@@ -178,7 +241,7 @@ $(document).ready(function() {
     var addModal = document.getElementById('addTitleModal');
 
     
-    var btn = document.getElementById('openAddButton');
+    var btn = document.getElementById('bookAddImg');
 
     
     var span = document.getElementsByClassName('close')[0];
@@ -203,7 +266,7 @@ $(document).ready(function() {
     var showModal = document.getElementById('showBooksModal');
 
     
-    var btn = document.getElementById('displayBookshelf');
+    var btn = document.getElementById('bookDisplayImg');
 
     
     var span = document.getElementsByClassName('showClose')[0];
@@ -229,7 +292,7 @@ $(document).ready(function() {
     var suggestModal = document.getElementById('showSuggestionModal');
 
     
-    var btn = document.getElementById('openSuggestionOverlay');
+    var btn = document.getElementById('bookSuggestImg');
 
     
     var span = document.getElementsByClassName('suggestClose')[0];
