@@ -1,9 +1,10 @@
 
     <link rel="stylesheet" href="/css/bookstyle.css">
     <link rel="stylesheet" href="/css/reset.css">
-    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700" rel="stylesheet">
 
     <h1 id="headTitle"> Bookshelf</h1>
+    <p id="blurb"> Click on the middle box to view your titles, click the right box to add a new title to your collection, or click the left box to find suggestions for new titles. </p>
     <div class="bookDisplayImage" id="bookSuggestImg">
     <img src="/images/retro.jpg" class="imgSquare" alt="click to get recommendations">
     <h2><span id="openSuggestionOverlay">Looking for new suggestions?</span></h2>
@@ -23,12 +24,14 @@
         <span class="showClose">Return to home</span>
 
     <div id="buttonWrapper">
+
            
             <label for="filterBook"><span class="formTitle">Choose a Shelf to display titles</span></label><br>
-
-            <select name="filterbooks" class="filterBooks" id="filterBook"><option value="TBR" name="TBR" class="tagsTBR">To be read</option><option value="wishlist" name="wishlist" class="wishList">Wishlist</option><option value="favorites" name="favorites" class="favoritedBook">Favorites</option><option value="reference" name="reference" class="bookReference">Reference</option><option value="readandreturn" name="readandreturn" class="ReadandReturn">Read & Returned</option></select>
+             <select name="filterbooks" class="filterBooks" id="filterBook"><option value="TBR" name="TBR" class="tagsTBR">To be read</option><option value="wishlist" name="wishlist" class="wishList">Wishlist</option><option value="favorites" name="favorites" class="favoritedBook">Favorites</option><option value="reference" name="reference" class="bookReference">Reference</option><option value="readandreturn" name="readandreturn" class="ReadandReturn">Read & Returned</option></select>
             <button id="showBooks" form="filterBookForm"> Filter Books </button>
-            <button id="showAllBooks"> Show All Books </button>
+            <button id="showAllBooks"> Show All Books </button><br>
+             </div>
+        <div class="boxDisplayWrapper">
          <div class='displayExistingTitles'>
         </div>
         <div class='wishlistDisplay'>
@@ -41,9 +44,9 @@
         </div>
         <div class='referenceDisplay'>
         </div>
-
+</div>
         
-    </div>
+   
 </div>
 </div>
 
@@ -71,14 +74,18 @@
         <span class="close">Return to home</span>
         <h2 class="formTitle"> Add a new title to your bookshelf </h2>
         <form action="/books" method="POST" id='bookInfoForm'>
+            <label for="title"> Title </label>
             <input id="title" type="text" placeholder="Title" name="title">
-            <input type="text" placeholder="author" name="author"><br>
+            <br>
+            <label for="author"> Author </label>
+            <input id="author" type="text" placeholder="author" name="author"><br>
+            <label for="addToShelf">Choose a Shelf</label>
+            <select name="tagsName" class="tagsDropDown" id="addToShelf"><option value="TBR" name="TRB" class="tagsTBR">To be read</option><option value="wishlist" name="wishlist" class="wishList">Wishlist</option><option value="favorites" name="favorites" class="favoritedBook">Favorites</option><option value="reference" name="reference" class="bookReference">Reference</option><option value="readandreturn" name="readandreturn" class="ReadandReturn">Read & Returned</option></select><br>
             <label for="chooseReadOption">Have you read it?</label>
            <select name="readName" class="readDropDown" id="chooseReadOption"><option value="yes" name="yes" class="readYes">Yes</option><option value="no" name="no" class="readNo">No</option></select><br>
              <label for="reviewBox">Add review or comments here</label><br>
             <textarea name ="infoForm" id='reviewBox' form='bookInfoForm'>Enter text here...</textarea><br>
-            <label for="addToShelf">Choose a Shelf</label>
-            <select name="tagsName" class="tagsDropDown" id="addToShelf"><option value="TBR" name="TRB" class="tagsTBR">To be read</option><option value="wishlist" name="wishlist" class="wishList">Wishlist</option><option value="favorites" name="favorites" class="favoritedBook">Favorites</option><option value="reference" name="reference" class="bookReference">Reference</option><option value="readandreturn" name="readandreturn" class="ReadandReturn">Read & Returned</option></select><br>
+            
             <button type="submit" id="submitButton" form="bookInfoForm">Submit</button>
             <div id="submitSuccess"></div>
         </form>

@@ -1,12 +1,42 @@
 * {
 	text-align:center;  
-
+}
+button{
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+    border: 2px solid #999999;
+    background-color: #999999;
+    padding: 5px;
+    border-radius: 3px;
+    margin:3px;
 }
 
+button:hover{
+     color: black;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #cccccc;
+
+}
+textarea{
+    text-align: left;
+    margin-top: 10px;
+    width:80%;
+    height:150px;
+}
 .recommendedTitle{
     font-weight:bold;
-    padding:5px;
     font-family: 'Poppins', sans-serif;
+    margin-top:10px;
+    text-align: left;
+}
+
+.recommendedDescription{
+    border-bottom: 1px dotted #6b777e;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    text-align: left;
 }
 
 .suggestionBox{
@@ -16,6 +46,14 @@
     text-align: center;
     margin: 0 auto;
     font-family: 'Poppins', sans-serif;
+}
+
+#blurb{
+    margin-bottom:1em;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16pt;
+    margin-left:10px;
+    margin-right:10px;
 }
 
 #bookSuggestImg:hover, #bookDisplayImg:hover, #bookAddImg:hover{
@@ -57,13 +95,37 @@ body{
 #headTitle {
 	font-size: 3em;
 	margin-top:2em;
-	margin-bottom:2em;
+	margin-bottom:1em;
     font-family: 'Poppins', sans-serif;
     font-weight:bold;
+    text-align: center;
+}
+
+.filterBooks{
+    margin-top:5px;
+}
+
+.displayExistingTitles, .wishlistDisplay, .tobereadDisplay, .favoritesDisplay, .readandreturnDisplay, .referenceDisplay{
+    display: inline-block;
+    vertical-align: top;
+    width: 250px;
+}
+.boxDisplayWrapper{
+    margin:0 auto;
+    display: inline-block;
+    width:700px;
 }
 
 .eachAppend{
-    padding:5px;
+    border: black 1px solid;
+    display:inline-block;
+    background-color: #D3D8E2;
+    height:10em;
+    line-height: 2;
+    margin:.5em;
+    box-shadow: 1px 3px 3px;
+    margin-left: 5px;
+     width: 250px;
 }
 
 #styleTitle {
@@ -77,7 +139,7 @@ body{
 }
 
 .bookTitle{
-	font-weight: bold;
+	font-weight: 700;
 }
 
 .bookAuthor{
@@ -176,13 +238,18 @@ form {
     float: right;
     font-size: 18px;
     font-weight: bold;
+    border: 2px solid #999999;
+    background-color: #999999;
+    padding: 10px;
+    border-radius: 3px;
 }
 
 .close:hover,
 .close:focus, .showClose:hover, .showClose:focus, .suggestClose:hover, .suggestClose:focus {
-    color: #aaa;
+    color: black;
     text-decoration: none;
     cursor: pointer;
+    background-color: #cccccc;
   }
 
 /*show books overlay*/
@@ -228,6 +295,7 @@ form {
     background-image: url("/images/retroFullSize.jpg"); 
 }
 
+
 .modalSuggestions{
     background-color: rgba(247,228,159,.93);
     margin: 15% auto; 
@@ -238,6 +306,37 @@ form {
 
 #bookInfoForm, .formTitle, .headerStyle {
     font-family: 'Poppins', sans-serif;
+}
+
+#title, #author, #addToShelf, #chooseReadOption, #reviewBox{
+    padding:2px;
+    margin:10px 0px 10px 2px;
+}
+
+#bookInfoForm{
+  /*  border: 1px black solid;*/
+    text-align: left;
+    width:300px;
+    margin: 0 auto;
+}
+
+#submitButton{
+   margin-left:95px;
+   padding:5px;
+   margin-bottom:5px;
+   color: black;
+    font-size: 14px;
+    font-weight: bold;
+    border: 2px solid #999999;
+    background-color: #999999;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+#submitButton:hover{
+    cursor: pointer;
+    background-color: #cccccc;
+    
 }
 
 .headerStyle{
