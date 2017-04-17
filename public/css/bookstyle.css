@@ -138,12 +138,8 @@ body{
     font-weight:bold;
 }
 
-.bookTitle{
+.bookTitle, .bookAuthor, .bookReview, .bookTags{
 	font-weight: 700;
-}
-
-.bookAuthor{
-	font-weight:italic;
 }
 
 .buttonWrapper {
