@@ -8,15 +8,15 @@ $(document).ready(function() {
         $.each(data, function(index, value) {
 
              if (value.tags == "wishlist"){
-                $('.wishlistDisplay').append('<div class="eachAppend" class="' + value.tags + '"><p class=' + value._id + '>Title: <span class="bookTitle">' + value.title + ' <br></span>Author:<span class="bookAuthor"> ' + value.author + ' </span><br>Have you read it? <span class="read">' + value.readBook + ' </span><br> notes: <span class="bookReview">' + value.review + ' </span><br>Tags: <span class="bookTags">' + value.tags + ' </span><br><button  id=' + value._id + ' class="deleteButton">Delete</button><button class="editButton">Edit</button><button class="updateButton">Update</button></p></div>')
+                $('.wishlistDisplay').append('<div class="eachAppend" class="' + value.tags + '"><p class=' + value._id + '>Title: <span class="bookTitle">' + value.title + ' <br></span>Author:<span class="bookAuthor"> ' + value.author + ' </span><br>Have you read it? <span class="read">' + value.readBook + ' </span><br> notes: <span class="bookReview">' + value.review + ' </span><br>Tags: <span class="bookTags">' + value.tags + ' </span><br><button  id=' + value._id + ' class="deleteButton">Delete</button><button class="editButton">Edit</button><button class="updateButton">Update</button><button class="exeuntButton">Cancel</button></p></div>')
              } else if (value.tags == "TBR"){
-                $('.tobereadDisplay').append('<div class="eachAppend" class="' + value.tags + '"><p class=' + value._id + '>Title: <span class="bookTitle">' + value.title + ' </span><br>Author:<span class="bookAuthor"> ' + value.author + ' </span><br>Have you read it? <span class="read">' + value.readBook + ' </span><br> notes: <span class="bookReview">' + value.review + ' </span><br>Tags: <span class="bookTags">' + value.tags + ' </span><br><button  id=' + value._id + ' class="deleteButton">Delete</button><button class="editButton">Edit</button><button class="updateButton">Update</button></p></div>')
+                $('.tobereadDisplay').append('<div class="eachAppend" class="' + value.tags + '"><p class=' + value._id + '>Title: <span class="bookTitle">' + value.title + ' </span><br>Author:<span class="bookAuthor"> ' + value.author + ' </span><br>Have you read it? <span class="read">' + value.readBook + ' </span><br> notes: <span class="bookReview">' + value.review + ' </span><br>Tags: <span class="bookTags">' + value.tags + ' </span><br><button  id=' + value._id + ' class="deleteButton">Delete</button><button class="editButton">Edit</button><button class="updateButton">Update</button><button class="exeuntButton">Cancel</button></p></div>')
              } else if (value.tags == "favorites"){
-                $('.favoritesDisplay').append('<div class="eachAppend" class="' + value.tags + '"><p class=' + value._id + '>Title: <span class="bookTitle">' + value.title + ' </span><br>Author:<span class="bookAuthor"> ' + value.author + ' </span><br>Have you read it? <span class="read">' + value.readBook + ' </span><br> notes: <span class="bookReview">' + value.review + ' </span><br>Tags: <span class="bookTags">' + value.tags + ' </span><br><button  id=' + value._id + ' class="deleteButton">Delete</button><button class="editButton">Edit</button><button class="updateButton">Update</button></p></div>')
+                $('.favoritesDisplay').append('<div class="eachAppend" class="' + value.tags + '"><p class=' + value._id + '>Title: <span class="bookTitle">' + value.title + ' </span><br>Author:<span class="bookAuthor"> ' + value.author + ' </span><br>Have you read it? <span class="read">' + value.readBook + ' </span><br> notes: <span class="bookReview">' + value.review + ' </span><br>Tags: <span class="bookTags">' + value.tags + ' </span><br><button  id=' + value._id + ' class="deleteButton">Delete</button><button class="editButton">Edit</button><button class="updateButton">Update</button><button class="exeuntButton">Cancel</button></p></div>')
              } else if (value.tags == "readandreturn"){
-                $('.readandreturnDisplay').append('<div class="eachAppend" class="' + value.tags + '"><p class=' + value._id + '>Title: <span class="bookTitle">' + value.title + ' </span><br>Author:<span class="bookAuthor"> ' + value.author + ' </span><br>Have you read it? <span class="read">' + value.readBook + ' </span><br> notes: <span class="bookReview">' + value.review + ' </span><br>Tags: <span class="bookTags">' + value.tags + ' </span><br><button  id=' + value._id + ' class="deleteButton">Delete</button><button class="editButton">Edit</button><button class="updateButton">Update</button></p></div>')
+                $('.readandreturnDisplay').append('<div class="eachAppend" class="' + value.tags + '"><p class=' + value._id + '>Title: <span class="bookTitle">' + value.title + ' </span><br>Author:<span class="bookAuthor"> ' + value.author + ' </span><br>Have you read it? <span class="read">' + value.readBook + ' </span><br> notes: <span class="bookReview">' + value.review + ' </span><br>Tags: <span class="bookTags">' + value.tags + ' </span><br><button  id=' + value._id + ' class="deleteButton">Delete</button><button class="editButton">Edit</button><button class="updateButton">Update</button><button class="exeuntButton">Cancel</button></p></div>')
              } else if (value.tags == "reference"){
-                $('.referenceDisplay').append('<div class="eachAppend" class="' + value.tags + '"><p class=' + value._id + '>Title: <span class="bookTitle">' + value.title + ' </span><br>Author:<span class="bookAuthor"> ' + value.author + ' </span><br>Have you read it? <span class="read">' + value.readBook + ' </span><br> notes: <span class="bookReview">' + value.review + ' </span><br>Tags: <span class="bookTags">' + value.tags + ' </span><br><button  id=' + value._id + ' class="deleteButton">Delete</button><button class="editButton">Edit</button><button class="updateButton">Update</button></p></div>')
+                $('.referenceDisplay').append('<div class="eachAppend" class="' + value.tags + '"><p class=' + value._id + '>Title: <span class="bookTitle">' + value.title + ' </span><br>Author:<span class="bookAuthor"> ' + value.author + ' </span><br>Have you read it? <span class="read">' + value.readBook + ' </span><br> notes: <span class="bookReview">' + value.review + ' </span><br>Tags: <span class="bookTags">' + value.tags + ' </span><br><button  id=' + value._id + ' class="deleteButton">Delete</button><button class="editButton">Edit</button><button class="updateButton">Update</button><button class="exeuntButton">Cancel</button></p></div>')
              }
             else{
                 $('.displayExistingTitles').append('<div> Sorry, no books to display! </div>')
@@ -86,9 +86,9 @@ $(document).ready(function() {
 
         $('.editButton').click(function() {
 
-
             $(this).hide();
             $(this).parent('p').children('.updateButton').show();
+            $(this).parent('p').children('.exeuntButton').show();
 
             var title = $(this).parent('p').children('span.bookTitle').text();
             console.log(title)
@@ -122,6 +122,12 @@ $(document).ready(function() {
                 $(this).parent('p').children('span.bookTags').html(' <select name="tagsName" class="tagsDropDown"><option value="readreturn" name="readreturn" class="ReadandReturn" selected>Read & Returned</option><option value="reference" name="reference" class="bookReference" >Reference</option><option value="favorites" name="favorites" class="favoritedBook">Favorites</option><option value="wishlist" name="wishlist" class="wishList">Wishlist</option><option value="TBR" name="TBR" class="tagsTBR">To be read</option><option value="readreturn" name="readreturn" class="ReadandReturn">Read & Returned</option></select>')
             }
 
+            $('.exeuntButton').click(function(){
+
+                $(this).parent('p').html('Title: <span class="bookTitle">' + title + ' </span><br>Author:<span class="bookAuthor"> ' + author + ' </span><br>Have you read it? <span class="read">' + readItText + ' </span><br> notes: <span class="bookReview">' + review + ' </span><br>Tags: <span class="bookTags">' + tagOption + ' </span><br><button class="deleteButton">Delete</button><button class="editButton">Edit</button><button class="updateButton">Update</button>');
+
+            });
+
              //collect the inputs to construct the new JSON object
 
             $('.updateButton').click(function() {
@@ -135,7 +141,7 @@ $(document).ready(function() {
                 var editedTags = $('p.' + buttonClassUpdate).children('span').children('input#editTags').val();
 
                 console.log(editedTags)
-                $(this).parent('p').html('Title: <span class="bookTitle">' + editedTitle + ' </span>Author:<span class="bookAuthor"> ' + editedAuthor + ' </span>Have you read it? <span class="read">' + editedRead + ' </span> notes: <span class="bookReview">' + editedReview + ' </span>Tags: <span class="bookTags">' + editedTags + ' </span><button  id=' + buttonClassUpdate + ' class="deleteButton">Delete</button><button class="editButton">Edit</button><button class="updateButton">Update</button>');
+                $(this).parent('p').html('Title: <span class="bookTitle">' + editedTitle + ' </span><br>Author:<span class="bookAuthor"> ' + editedAuthor + ' </span><br>Have you read it? <span class="read">' + editedRead + ' </span><br> notes: <span class="bookReview">' + editedReview + ' </span><br>Tags: <span class="bookTags">' + editedTags + ' </span><br><button  id=' + buttonClassUpdate + ' class="deleteButton">Delete</button><button class="editButton">Edit</button><button class="updateButton">Update</button>');
 
 
         
@@ -236,7 +242,17 @@ $(document).ready(function() {
         });
     });
 
+$('#loginBox').click(function() {
+    $(this).hide();
+    console.log('hi');
+    $('.signinWrapper').toggle();
+});
 
+$('#loginBoxBottom').click(function(){
+    $(this).hide();
+    window.scrollTo(0,0);
+    $('.signinWrapper').toggle();
+})
     // add form modal 
     var addModal = document.getElementById('addTitleModal');
 

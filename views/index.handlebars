@@ -11,11 +11,11 @@
     </div>
     <div class="bookDisplayImage" id="bookDisplayImg">
     <img src="/images/books.jpeg" class="imgSquare" alt="click to display your books">
-    <h2><span id="displayBookshelf">Click to display your books</span></h2>
+    <h2><span id="displayBookshelf">Show my collection</span></h2>
     </div>
     <div class="bookDisplayImage" id="bookAddImg">
     <img src="/images/typewriter.jpeg" class="imgSquare" alt="click to add new title">
-    <h2><span id="openAddButton"> Click to add new titles </span></h2>
+    <h2><span id="openAddButton"> Add new titles </span></h2>
 </div>
 
     <div id="showBooksModal" class="booksModal">
@@ -74,12 +74,12 @@
         <span class="close">Return to home</span>
         <h2 class="formTitle"> Add a new title to your bookshelf </h2>
         <form action="/books" method="POST" id='bookInfoForm'>
-            <label for="title"> Title </label>
-            <input id="title" type="text" placeholder="Title" name="title">
+            <label for="title"> Title *</label><br>
+            <input id="title" type="text" placeholder="Title" name="title" required>
             <br>
-            <label for="author"> Author </label>
-            <input id="author" type="text" placeholder="author" name="author"><br>
-            <label for="addToShelf">Choose a Shelf</label>
+            <label for="author"> Author *</label><br>
+            <input id="author" type="text" placeholder="author" name="author" required><br>
+            <label for="addToShelf">Choose a Shelf</label><br>
             <select name="tagsName" class="tagsDropDown" id="addToShelf"><option value="TBR" name="TRB" class="tagsTBR">To be read</option><option value="wishlist" name="wishlist" class="wishList">Wishlist</option><option value="favorites" name="favorites" class="favoritedBook">Favorites</option><option value="reference" name="reference" class="bookReference">Reference</option><option value="readandreturn" name="readandreturn" class="ReadandReturn">Read & Returned</option></select><br>
             <label for="chooseReadOption">Have you read it?</label>
            <select name="readName" class="readDropDown" id="chooseReadOption"><option value="yes" name="yes" class="readYes">Yes</option><option value="no" name="no" class="readNo">No</option></select><br>

@@ -1,12 +1,14 @@
 
-<h1> Welcome to the Bookshelf Demo!</h3>
-<p> To simply test out the app, enter the following credentials:<br>
-	<span> Username: </span> DEMOS<br>
-	<span> Password: </span> password<br>
-	If you have already signed up, please enter your existing credentials. </p>
 
-<h2 class="page-header"> Please Login</h2>
+
+<div class="bookHero">
+<h2 class="page-header" id="loginBox">Click here to log into the Demo Account</h2>
+<div class="signinWrapper">
 <form method="post" action="/users/login">
+<p> To simply test out the app, enter the following credentials:<br>
+  <span> Username: </span> DEMOS<br>
+  <span> Password: </span> password<br>
+  If you have already signed up, please enter your existing credentials. </p>
   <div class="form-group">
     <label>Username</label><br>
     <input type="text" class="form-control" name="username" placeholder="Username">
@@ -17,3 +19,21 @@
   </div>
   <button type="submit" class="loginButtonSubmit">Submit</button>
 </form>
+</div>
+<h1 id="heroBanner"> Welcome to the Bookshelf Demo!</h3>
+</div>
+
+<div id="pointOne">
+<img src="/images/openBook.png" class="illustration" id="shelfillustration" ></img>
+<h3 id="textPointOne"> View your book collection, filter by shelf, add and edit notes about the book, and delete books as you curate your collection</h3>
+</div>
+<div id="pointTwo">
+<h3 id="secondText"> Add new books to your list and assign them to shelves to help manage your collections</h3>
+<img src="/images/bookIllustration.png" alt="Book" class="illustration" id="bookillustration"></img>
+<div id="pointThree">
+<img src="/images/lightbulbIllustration.png" alt="lightbulb" class="illustration" id="lightbulbillustration"></img>
+<h3 id="suggestiontext"> Get suggestions for new books to read based on your favorites! </h3>
+</div>
+<h2 class="page-header" id="loginBoxBottom">Click here to log into the Demo Account</h2>
+<script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+<script src="/js/bookshelf.js"></script>

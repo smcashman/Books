@@ -12,6 +12,74 @@ button{
     margin:3px;
 }
 
+.bookHero{
+     background-image: url("/images/stack-of-books-vintage-books-book-books.jpg"); 
+     background-size: cover;
+     border-bottom:2px solid black;
+     height:600px;
+     width:100%;
+     opacity:0.8;
+
+}
+
+#heroBanner{
+    width:40%;
+    margin:0 auto;
+        -moz-box-shadow:    3px 3px 5px 6px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow:         3px 3px 5px 6px #ccc;
+
+}
+
+#pointOne{
+    height:200px;
+    padding-top: 50px;
+}
+
+#pointTwo{
+    height:200px;
+    padding-top: 50px;
+}
+
+#textPointOne{
+    width:30%;
+    display:inline-block;
+    margin-bottom: 50px;
+    padding-bottom:50px;
+}
+
+#pointThree{
+    margin-bottom:25px;
+}
+
+#secondText{
+    width:30%;
+    display: inline-block;
+    padding-bottom:100px;
+}
+
+#lightbulbillustration{
+    margin-right:200px;
+    display: inline-block;
+}
+
+#shelfillustration{
+    margin-right:300px;
+    display: inline-block;
+    height:200px;
+}
+
+#suggestiontext{
+    display:inline-block;
+    width: 30%;
+}
+
+#bookillustration{
+    margin-top:20px;
+    margin-left:200px;
+    display:inline-block;
+    height:200px;
+}
 button:hover{
      color: black;
     text-decoration: none;
@@ -48,20 +116,49 @@ textarea{
     font-family: 'Poppins', sans-serif;
 }
 
-#blurb{
-    margin-bottom:1em;
+#blurb{ 
+    width:70%;
     font-family: 'Poppins', sans-serif;
     font-size: 16pt;
-    margin-left:10px;
-    margin-right:10px;
+    margin:0 auto;
+    margin-bottom:3em;
+    line-height: 2;
 }
 
 #bookSuggestImg:hover, #bookDisplayImg:hover, #bookAddImg:hover{
     cursor:pointer;
 }
 
+#bookSuggestImg, #bookDisplayImg, #bookAddImg{
+    display:block;
+    width:60%;
+}
+
 #suggestionTitle{
     margin-bottom:5px;
+}
+
+input#bookSearchTerms, #submitSearch{
+    height:30px;
+}
+
+input#bookSearchTerms{
+    font-size: 16pt;
+}
+
+#reviewBox{
+    margin-top: 15px;
+}
+
+#chooseReadOption, #addToShelf {
+    height:30px;
+    font-size:12pt; 
+}
+
+#title, #author{
+    height:25px;
+    font-size: 14pt;
+    opacity: 1.0;
 }
 
 html, body {
@@ -69,7 +166,7 @@ html, body {
 }
 
 body{
-	background-color: #DAC8B1;
+	background-color: #ffffff;
 }
 
 .formTitle {
@@ -88,17 +185,23 @@ body{
     border-right-style: solid;
     border-bottom-style: solid;
     border-left-style: solid;
-    width: 400px;
-    height: 300px;
+    margin-bottom:20px;
+    width:100%;
 }
 
 #headTitle {
 	font-size: 3em;
+    margin:0 auto;
 	margin-top:2em;
 	margin-bottom:1em;
     font-family: 'Poppins', sans-serif;
     font-weight:bold;
     text-align: center;
+    /*border-bottom:1px solid black;*/
+    width:20%;
+    -moz-box-shadow:    3px 3px 5px 6px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow:         3px 3px 5px 6px #ccc;
 }
 
 .filterBooks{
@@ -106,9 +209,9 @@ body{
 }
 
 .displayExistingTitles, .wishlistDisplay, .tobereadDisplay, .favoritesDisplay, .readandreturnDisplay, .referenceDisplay{
-    display: inline-block;
+    display:block;
     vertical-align: top;
-    width: 250px;
+    width: 100%;
 }
 .boxDisplayWrapper{
     margin:0 auto;
@@ -118,14 +221,59 @@ body{
 
 .eachAppend{
     border: black 1px solid;
-    display:inline-block;
-    background-color: #D3D8E2;
-    height:10em;
+    background-color: white;
+    opacity: 1.0;
+   /* height:10em;*/
     line-height: 2;
     margin:.5em;
     box-shadow: 1px 3px 3px;
-    margin-left: 5px;
-     width: 250px;
+    width: 100%;
+}
+
+#loginBox, #loginBoxBottom{
+    margin: 0 auto;
+    width:150px;
+    margin-top:50px;
+    padding-bottom:10px;
+    margin-right:10px;
+    color: black;
+    font-size: 14pt;
+    font-weight: bold;
+    border: 2px solid #999999;
+    background-color: #999999;
+    padding: 5px;
+    border-radius: 3px;
+    background-color: #2d8659;
+   /* margin:3px;*/
+}
+
+#loginBoxBottom{
+    margin:0 auto;
+
+}
+
+.signinWrapper{
+    border:1px solid black;
+    box-shadow: 1px 3px 3px;
+    background-color: white;
+    width:300px;
+    margin: 0 auto;
+    margin-top:50px;
+    padding-bottom:10px;
+    margin-right:10px;
+    display:none;
+}
+
+#plusMore{
+    margin-top:3px;
+    width:30px;
+
+}
+
+.illustration {
+    width:15%;
+    text-align:right;
+
 }
 
 #styleTitle {
@@ -151,6 +299,9 @@ body{
 .updateButton {
 	display:none;
 }
+.exeuntButton{
+display: none;
+}
 
 #titleStyle {
 	font-weight: bold;
@@ -169,9 +320,16 @@ body{
 /*image w text*/
 .bookDisplayImage {
 	position: relative; 
-	width:400px;
-	display: inline-block;
+	/*width: 80%;*/
+    margin:0 auto;
+    display:inline-block;
+    filter:grayscale(100%);
 }
+
+.bookDisplayImage:hover{
+    filter:none;
+}
+
 
 .bookDisplayImage h2 {
 	position: absolute; 
@@ -182,7 +340,7 @@ body{
 
 .bookDisplayImage h2 span {
 	 color: white; 
-   font: bold 24px/45px Helvetica, Sans-Serif; 
+   font: bold 36pt Helvetica, Sans-Serif; 
    letter-spacing: -1px;  
    background: rgb(0, 0, 0); /* fallback color */
    background: rgba(0, 0, 0, 0.7);
@@ -220,9 +378,9 @@ form {
 }
 
 
-
 .showAddForm {
-    background-color: rgba(211,227,224,.93);
+    background-color: white;
+    opacity:0.8;
     margin: 15% auto; 
     padding: 20px;
     border: 1px solid #888;
@@ -269,7 +427,8 @@ form {
 }
 
 .modalShowBooks {
-    background-color: rgba(29,128,127,.93);
+    background-color: white;
+    opacity: 0.8;
     margin: 15% auto; 
     padding: 20px;
     border: 1px solid #888;
@@ -293,11 +452,12 @@ form {
 
 
 .modalSuggestions{
-    background-color: rgba(247,228,159,.93);
+    background-color: white;
+    opacity:.9;
     margin: 15% auto; 
     padding: 20px;
-    border: 3px solid #888;
-    width: 80%; 
+    border: 1px solid #888;
+    width: 80%;
 }
 
 #bookInfoForm, .formTitle, .headerStyle {
@@ -346,17 +506,21 @@ form {
 }
 
 .loginButtonSubmit{
-    border-radius:20px;
-    font-size: 1em;
-    margin-top:5px;
-    background-color: rgb(29,128,127);
+     color: black;
+    font-size: 12px;
+    font-weight: bold;
+    border: 2px solid #999999;
+    background-color: #999999;
+    padding: 5px;
+    border-radius: 3px;
+    margin:3px;
 
 }
-
+/*
 .page-header {
-    margin-top:150px;
+    
 }
-
+*/
 .form-group{
     padding:5px;
 }
