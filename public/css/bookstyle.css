@@ -516,12 +516,37 @@ form {
     margin:3px;
 
 }
-/*
-.page-header {
-    
-}
-*/
+
 .form-group{
     padding:5px;
 }
 
+/*responsive layouts*/
+@media all and (max-width: 899px) {
+    #headTitle{
+    -webkit-box-shadow: none;
+    border-bottom:none;
+    width:100%;
+    margin:0 auto;
+    margin-top: 25px;
+    }
+    #openSuggestionOverlay,  #displayBookshelf, #openAddButton{
+        font-size:20pt;
+        margin-top:20px;
+        margin-bottom:10px;
+        line-height:1.75;
+        width:100%;
+        display:block;
+        padding:0;
+    }
+
+     #openSuggestionOverlay{
+        margin-bottom:30px;
+     }
+
+    .imgSquare{
+        margin-bottom:120px;
+        width:100%;
+        padding:0;
+    }
+}
