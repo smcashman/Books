@@ -523,6 +523,10 @@ form {
 
 /*responsive layouts*/
 @media all and (max-width: 899px) {
+
+    body{
+        overflow-x: hidden;
+    }
     #headTitle{
     -webkit-box-shadow: none;
     border-bottom:none;
@@ -548,5 +552,35 @@ form {
         margin-bottom:120px;
         width:100%;
         padding:0;
+    }
+
+    #shelfillustration{
+        display: inline-block;
+        width:45%;
+        margin: 0;
+    }
+
+    #bookillustration{
+        width:30%;
+        display: inline-block;
+        margin-left:20px;
+    }
+    #lightbulbillustration {
+        margin-right:25px;
+    }
+    .suggestClose{
+        display:block;
+        margin-bottom:5px;
+    }
+    .suggestionBox{
+        width:100%;
+        display:block;
+        text-align: center;
+    }
+    .boxDisplayWrapper{
+        width:75%;
+    }
+    .formTitle{
+        font-size:16pt;
     }
 }
